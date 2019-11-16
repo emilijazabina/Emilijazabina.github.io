@@ -1,10 +1,28 @@
-body{
-	background-color: #C6D3EF;
-	padding: 0px 20px 0px 20px;
 
+body {
+	margin: 0;
+	width: 100%;
+	height: 100vh;
+	font-family: Indie Flower;
+	color: #000000;
+	background: linear-gradient(-45deg, #D3D4D6, #FAFBFC, #D8E4FF, #F4F7FC);
+	background-size: 400% 400%;
+	animation: gradientBG 15s ease infinite;
 }
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 html,body{
-	background:radial-gradient(#C6D3EF,#E8EBF2);
+
 	height:100%;
 	width:100%;
 	position:relative;
@@ -32,14 +50,16 @@ form{
 	size: 50px;
 }
 header {
-	background-image: url("img/cr7_logo.png");
+	background-image: url("img/cr7_logo.png") ;
 	background-repeat: repeat-x;
 }
 .header{
 
 }
 
+/* buttons
 
+ */
 .myButton0 {
 	box-shadow: 0px 1px 0px 0px #9fb4f2;
 	background: #2d6cff linear-gradient(to bottom, #2d6cff 5%, #07173d 100%);
@@ -88,6 +108,37 @@ header {
 	top:1px;
 }
 
+.myButton {
+	box-shadow: 0px 10px 14px -7px #276873;
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	background-color:#599bb3;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+	margin: 20px;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	background-color:#408c99;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+.buttons{
+	text-align: center;
+}
+
+/*buttons end
+
+ */
 .info {
 	width: 45%;
 	float: left;
@@ -114,6 +165,9 @@ header {
     margin-right: 20px;
 
 }
+@media  {
+	
+}
 .intro{
 
 
@@ -138,6 +192,7 @@ li{
 	margin: 10px auto;
 	padding: 16px;
 	background: #F7F7F7;
+	color: #0d1321;
 }
 
 .form-style-6 input[type="text"],
@@ -378,7 +433,7 @@ img.hover-shadow {
 }
 
 .hover-shadow:hover {
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
 .close {
