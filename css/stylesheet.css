@@ -166,11 +166,11 @@ form{
 
  }
 .vid-gal {
-    border: 5px, chartreuse;
-    float: right;
-    padding: 15px;
-    margin-right: 20px;
-
+     border: 5px;
+     width: 45%;
+     float: left;
+     padding: 15px;
+     margin-right: 20px;
 }
 @media only screen and (max-width: 600px) {
 	.vid-gal{
