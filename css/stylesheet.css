@@ -554,3 +554,12 @@ img.hover-shadow {
 .form-style-2 input[type="button"]:hover{
 	background: #2D6CFF;
 }
+
+/*maps
+
+ */
+#map {
+	height: 400px;
+	width: 700px;
+	align-items: center;
+}
