@@ -49,17 +49,24 @@ form{
 	padding-top: 8px;
 	size: 50px;
 }
-header {
-	background-image: url("img/cr7_logo.png") ;
-	background-repeat: repeat-x;
+
 }
 .header{
+	height: 300px;
 
 }
-
+ 
+.maps{
+	text-align: center;
+ }
+}
 /* buttons
 
  */
+ .buttons{
+
+ }
+
 .myButton0 {
 	box-shadow: 0px 1px 0px 0px #9fb4f2;
 	background: #2d6cff linear-gradient(to bottom, #2d6cff 5%, #07173d 100%);
@@ -139,6 +146,7 @@ header {
 /*buttons end
 
  */
+
 .info {
 	width: 45%;
 	float: left;
@@ -158,15 +166,16 @@ header {
 
  }
 .vid-gal {
-    border: 5px;
-    width: 45%;
+    border: 5px, chartreuse;
     float: right;
     padding: 15px;
     margin-right: 20px;
 
 }
-@media  {
-	
+@media only screen and (max-width: 600px) {
+	.vid-gal{
+		float: left;
+	}
 }
 .intro{
 
