@@ -6,14 +6,24 @@
     <link rel="stylesheet" type="text/css" href="CSS/stylesheet.css"/>
 </head>
 <body>
-<div class="header">
+<div >
     <hr>
     <nav>
-        <a href="index_home.html" class="myButton0">HOME</a>
-        <a href="index_quiz.html" class="myButton0">QUIZ</a>
-        <a href="index_gallery.html" class="myButton1">GALLERY</a>
-        <a href="index_contacts.html" class="myButton0">CONTACTS</a>
+        <a href="home.html" class="myButton0">HOME</a>
+        <a href="quiz.html" class="myButton0">QUIZ</a>
+        <a href="gallery.html" class="myButton1">GALLERY</a>
+        <a href="contacts.html" class="myButton0">CONTACTS</a>
     </nav>
+    <div>
+        <table width="100%">
+            <tr>
+                <td background="header1.png" ><p class="table"><img src="img/optimized-maxW950-ronaldo-1.jpg"  alt=""></p>
+                </td>
+            </tr>
+
+        </table>
+
+    </div>
     <div>
         <hr>
         <h1>GALLERY</h1>
@@ -26,99 +36,12 @@
     <a href="gallery_videos.html" class="myButton">Video</a>
 
 </div>
-<div class = "gallery">
-    <div class="clipped-border">
-        <img src="img/cr7_juve_kik.jpg" onclick="openLightbox();toSlide(1)" alt="Smiley face" >
-    </div>
-    <div class="clipped-border" >
-        <img src="img/cr7_rm_celeb.png" onclick="openLightbox();toSlide(2)" alt="Smiley face" >
-    </div>
-    <div class="clipped-border" >
-        <img src="img/cr7_port_1.jpg" onclick="openLightbox();toSlide(3)" alt="Smiley face" >
-    </div>
-    <div class="clipped-border">
-        <img src="img/cr7_rm_trophy.jpg" onclick="openLightbox();toSlide(4)" alt="Smiley face" >
-    </div>
-    <div class = "shadow"></div>
+<div>
+    <img src="img/cr7_juve_kik.jpg" alt="cr7 juventus kick" height="389" width="600">
+    <p>
+        Cristiano Ronaldo arrived at Juventus with a reputation as one of the most accomplished goalscorers of all time and, as you'd expect, with that comes great expectations.
+        The Serie A champions saw fit to fork out €100 million (£88m/$117m) for the 34-year-old for a number of reasons, but chief among those is his incredible capacity to find the back of the net0.
+        Ronaldo's record across his career is epic and prior to his arrival in Turin he had struck 658 goals in 915 club games , with 450 of those coming in his 438 games for Real Madrid.
+        <a href="https://www.goal.com/en/news/cristiano-ronaldo-juventus-goals-assists-results-fixtures/16joqwgcw6uux1ktglzk9ubyf8">More Info</a>
+    </p>
 </div>
-<div id="Lightbox" class="modal">
-    <span class="close pointer" onclick="closeLightbox()">&times;</span>
-    <div class="modal-content">
-        <div class="slide">
-            <img src="img/cr7_juve_kik.jpg" class="image-slide" alt="juve" />
-        </div>
-        <div class="slide">
-            <img src="img/cr7_rm_celeb.png" class="image-slide" alt="Toy car exploring offroad." />
-        </div>
-        <div class="slide">
-            <img src="img/cr7_port_1.jpg" class="image-slide" alt="Toy car in the city." />
-        </div>
-        <div class="slide">
-            <img src="img/cr7_rm_trophy.jpg" class="image-slide" alt="Toy car in the city." />
-        </div>
-
-        <a class="previous" onclick="changeSlide(-1)">&#10094;</a>
-        <a class="next" onclick="changeSlide(1)">&#10095;</a>
-
-        <div class="dots">
-            <div class="col">
-                <img src="img/cr7_juve_kik.jpg" class="modal-preview hover-shadow" onclick="toSlide(1)" alt="Juventus game, kick" />
-            </div>
-            <div class="col">
-                <img src="img/cr7_rm_celeb.png" class="modal-preview hover-shadow" onclick="toSlide(2)" alt="CR7 Celebration" />
-            </div>
-            <div class="col">
-                <img src="img/cr7_port_1.jpg" class="modal-preview hover-shadow" onclick="toSlide(3)" alt="CR7 in Portugal uniform" />
-            </div>
-            <div class="col">
-                <img src="img/cr7_rm_trophy.jpg" class="modal-preview hover-shadow" onclick="toSlide(4)" alt="Holding trophy" />
-            </div>
-        </div>
-    </div>
-</div>
-<script>
-    let slideIndex = 1;
-    showSlide(slideIndex);
-
-    function openLightbox() {
-        document.getElementById('Lightbox').style.display = 'block';
-    };
-
-    function closeLightbox() {
-        document.getElementById('Lightbox').style.display = 'none';
-    };
-
-    function changeSlide(n) {
-        showSlide(slideIndex += n);
-    };
-
-    function toSlide(n) {
-        showSlide(slideIndex = n);
-    };
-
-    function showSlide(n) {
-        const slides = document.getElementsByClassName('slide');
-        let modalPreviews = document.getElementsByClassName('modal-preview');
-
-        if (n > slides.length) {
-            slideIndex = 1;
-        };
-
-        if (n < 1) {
-            slideIndex = slides.length;
-        };
-
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        };
-
-        for (let i = 0; i < modalPreviews.length; i++) {
-            modalPreviews[i].className = modalPreviews[i].className.replace(' active', '');
-        };
-
-        slides[slideIndex - 1].style.display = 'block';
-        modalPreviews[slideIndex - 1].className += ' active';
-    };
-</script>
-</body>
-</html>

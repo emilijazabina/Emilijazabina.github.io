@@ -20,6 +20,9 @@ body {
 		background-position: 0% 50%;
 	}
 }
+.table {
+	text-align: center;
+}
 
 html,body{
 
@@ -49,17 +52,23 @@ form{
 	padding-top: 8px;
 	size: 50px;
 }
-header {
-	background-image: url("img/cr7_logo.png") ;
-	background-repeat: repeat-x;
+
 }
 .header{
 
 }
 
+.maps{
+	text-align: center;
+ }
+}
 /* buttons
 
  */
+ .buttons{
+
+ }
+
 .myButton0 {
 	box-shadow: 0px 1px 0px 0px #9fb4f2;
 	background: #2d6cff linear-gradient(to bottom, #2d6cff 5%, #07173d 100%);
@@ -139,6 +148,7 @@ header {
 /*buttons end
 
  */
+
 .info {
 	width: 45%;
 	float: left;
@@ -158,15 +168,16 @@ header {
 
  }
 .vid-gal {
-    border: 5px;
-    width: 45%;
-    float: right;
-    padding: 15px;
-    margin-right: 20px;
-
+     border: 5px;
+     width: 45%;
+     float: left;
+     padding: 15px;
+     margin-right: 20px;
 }
-@media  {
-	
+@media only screen and (max-width: 600px) {
+	.vid-gal{
+		float: left;
+	}
 }
 .intro{
 
@@ -262,222 +273,7 @@ li{
 
  */
 
-:root{
-	--width: 100%;
-	--height: 100%;
-	--border-width: 200px;
-	--border-height: 200px;
 
-}
-
-
-
-.gallery{
-	position:relative;
-	height:100%;
-	width:100%;
-}
-
-.gallery:after{
-	content:'';
-}
-
-.shadow{
-	position: absolute;
-	top: 500px;
-	left: 100px;
-	width: 500px;
-	height: 40px;
-	border-radius: 50%;
-	background: radial-gradient(#805d78,rgba(0,0,0,0) 70%);
-}
-
-img{
-	width:var(--width);
-	height:var(--height);
-}
-
-.clipped-border{
-	-webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-	clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-	padding:5px;
-	background:linear-gradient(lightblue,darkblue);
-	width:var(--border-width);
-	height:var(--border-height);
-	max-height:250px;
-	max-width:250px;
-	height: var(--height);
-	width:var(--width);
-	transition:transform 0.2s;
-	position:absolute;
-	cursor:pointer;
-}
-
-
-
-.clipped-border:before{
-	content:'';
-	position:absolute;
-	opacity:0.5;
-	width:350px;
-	height:70px;
-	background:white;
-	top:0;
-	left:0;
-	z-index:1;
-	transform:rotate(45deg);
-	transition:transform 0.5s;
-}
-
-.clipped-border:hover:before{
-	transform: translate(-100px,400%) rotate(45deg);
-	transition:transform 0.5s;
-}
-
-.clipped-border:nth-child(2){
-	top:196px;
-	left:118px;
-}
-
-.clipped-border:nth-child(3){
-	top:0;
-	left:235px;
-}
-
-.clipped-border:nth-child(4){
-	top:196px;
-	left:353px;
-}
-
-.clipped-border:nth-child(5){
-	top:0;
-	left:470px;
-}
-
-#clipped {
-	-webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-	clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-
-}
-
-.clipped-border:hover{
-	transform:scale(1.2);
-	transition:transform 0.2s;
-	z-index:10;
-}
-
-/* lightbox
-
- */
-.col {
-	float: left;
-	width: 25%;
-}
-.modal {
-	display: none;
-	position: fixed;
-	z-index: 1;
-	padding: 10px 62px 0px 62px;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	overflow: auto;
-	background-color: black;
-}
-
-.modal-content {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	margin: auto;
-	padding: 0 0 0 0;
-	width: 80%;
-	max-width: 1200px;
-}
-
-
-.slide {
-	display: none;
-}
-
-.image-slide {
-	width: 100%;
-}
-
-.modal-preview {
-	width: 100%;
-}
-
-.dots {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-}
-
-
-
-img.preview, img.modal-preview {
-	opacity: 0.6;
-}
-
-img.active,
-.preview:hover,
-.modal-preview:hover {
-	opacity: 1;
-}
-
-img.hover-shadow {
-	transition: 0.3s;
-}
-
-.hover-shadow:hover {
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
-}
-
-.close {
-	color: white;
-	position: relative;
-	top: 10px;
-	left: 35px;
-	font-size: 35px;
-	font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-	color: #999;
-	text-decoration: none;
-	cursor: pointer;
-}
-
-.previous,
-.next {
-	cursor: pointer;
-	position: absolute;
-	top: 50%;
-	width: auto;
-	padding: 16px;
-	margin-top: -50px;
-	color: white;
-	font-weight: bold;
-	font-size: 20px;
-	transition: 0.6s ease;
-	border-radius: 0 3px 3px 0;
-	user-select: none;
-	-webkit-user-select: none;
-}
-
-.next {
-	right: 0;
-	border-radius: 3px 0 0 3px;
-}
-
-.previous:hover,
-.next:hover {
-	background-color: rgba(0, 0, 0, 0.8);
-}
 
 
 
