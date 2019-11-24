@@ -149,7 +149,7 @@ form{
 
  */
 
-.info {
+.info1 {
 	width: 45%;
 	float: left;
 	padding: 15px;
@@ -157,6 +157,19 @@ form{
 	background: #F7F7F7;
 	font: 120% Arial, Helvetica, sans-serif;
 
+}
+.info2{
+	width: 45%;
+	float: right;
+	padding: 15px;
+	margin: 20px;
+	background: #F7F7F7;
+	font: 120% Arial, Helvetica, sans-serif;
+
+}
+.gallery{
+	list-style-type: none;
+	padding: 20px;
 }
 
 .vid {
@@ -169,16 +182,25 @@ form{
  }
 .vid-gal {
      border: 5px;
-     width: 45%;
-     float: left;
+     float: right;
+	width: auto;
      padding: 15px;
      margin-right: 20px;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1360px) {
 	.vid-gal{
 		float: left;
 	}
 }
+@media only screen and (max-width: 660px) {
+	.vid-gal{
+		width: 400px;
+		height: 250px;
+
+	}
+}
+
+
 .intro{
 
 
